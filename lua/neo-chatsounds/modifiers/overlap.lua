@@ -1,11 +1,11 @@
 local MODIFIER = {}
 
 MODIFIER.Name = "overlap"
-MODIFIER.DefaultValue = 0
+MODIFIER.DefaultValue = 1
 
 function MODIFIER:ParseArgs(args)
 	local n = tonumber(args)
-	if not n then return 0 end
+	if not n then return 1 end
 
 	return math.max(0, n)
 end
